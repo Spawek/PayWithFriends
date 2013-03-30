@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<PayWithFriends.Models.Friend>
+
+@{
     ViewBag.Title = "Home Page";
 }
 @section featured {
@@ -41,5 +43,22 @@
         You can easily find a web hosting company that offers the right mix of features
         and price for your applications.
         <a href="http://go.microsoft.com/fwlink/?LinkId=245157">Learn more…</a>
+    </li>
+
+    <li class ="four">
+        <h5>YOUR DATA</h5>
+        @foreach (PayWithFriends.Models.Friend friend in Model)
+        {
+            @friend.receiverID.ToString(); @: is a friend of @friend.senderID.ToString()
+            @: and this friendship is
+            if (friend.accepted)
+            {
+                @: confirmed
+            }
+            else
+            {
+                @: not confirmed   
+            }
+        }
     </li>
 </ol>

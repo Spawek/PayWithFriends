@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayWithFriends", "PayWithFriends\PayWithFriends.csproj", "{3215F7FD-891F-4227-A3B4-660BF3A01F4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayWithFriends.Tests", "PayWithFriends.Tests\PayWithFriends.Tests.csproj", "{391AC848-9C9A-44B5-B480-9EC2DCCE4C39}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3215F7FD-891F-4227-A3B4-660BF3A01F4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3215F7FD-891F-4227-A3B4-660BF3A01F4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3215F7FD-891F-4227-A3B4-660BF3A01F4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3215F7FD-891F-4227-A3B4-660BF3A01F4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{391AC848-9C9A-44B5-B480-9EC2DCCE4C39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{391AC848-9C9A-44B5-B480-9EC2DCCE4C39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{391AC848-9C9A-44B5-B480-9EC2DCCE4C39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{391AC848-9C9A-44B5-B480-9EC2DCCE4C39}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

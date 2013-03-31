@@ -3,13 +3,40 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Facebook;
 using PayWithFriends.Models;
 
 namespace PayWithFriends.Controllers
 {
+
+    //SOME TUTORIALS: http://blue-and-orange.net/articles/facebook/integrating-facebook-login-button-in-aspnet-mvc-4-application/
+    //http://blue-and-orange.net/articles/facebook/integrating-facebook-login-button-in-aspnet-mvc-4-application/
+
+    public class FacebookLogin : IHttpHandler, System.Web.SessionState.IRequiresSessionState
+    {
+
+        public void ProcessRequest(HttpContext context)
+        {
+            var accessToken = context.Request["accessToken"];
+            context.Session["AccessToken"] = accessToken;
+
+            context.Response.Redirect("/Home");
+        }
+
+        public bool IsReusable
+        {
+            get { return false; }
+        }
+    }
+
+
+
     public class TestController : Controller
     {
+
         DbClassesDataContext db = new DbClassesDataContext();
+        FacebookClient client = new FacebookClient();
+        FacebookLogin FbLogin = new FacebookLogin();
 
         //
         // GET: /Test/
@@ -17,9 +44,19 @@ namespace PayWithFriends.Controllers
 
         public ActionResult Index()
         {
-            var data = from r in db.Friends
-                       select r;
-            return View(data);
+            //var data = from r in db.Friends
+            //           select r;
+            //return View(data);
+            //client.AccessToken = 
+
+            ///NEW
+            //var accessToken = Session["AccessToken"].ToString();
+            //var client = new FacebookClient(accessToken);
+
+            //dynamic me = client.Get("me") as IDictionary<string, object>;
+            //return View(me);
+
+            return View();
         }
 
         //

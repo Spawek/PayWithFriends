@@ -1,4 +1,5 @@
-﻿@model IEnumerable<PayWithFriends.Models.Friend>
+﻿@*@model IEnumerable<PayWithFriends.Models.Friend>*@
+@model IDictionary<string, object>
 
 @{
     ViewBag.Title = "Index";
@@ -6,7 +7,7 @@
 
 <h2>Index</h2>
 
-<p>
+@*<p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table>
@@ -43,3 +44,12 @@
 }
 
 </table>
+*@
+
+<h4>
+    FB TEST
+</h4>
+ID: @Model["id"].ToString()
+Name: @Model["name"].ToString()
+
+
